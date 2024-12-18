@@ -20,6 +20,7 @@ def fibonacci(n: int, memo: dict = {}) -> int:
     recursive case:
     n isn't in memo and >1 returns f(n-1)+f(n-2)
     """
+<<<<<<< HEAD
     
     if n == 0: # base case 1
         return 0 # turn-around 1
@@ -37,6 +38,22 @@ def fibonacci(n: int, memo: dict = {}) -> int:
     right_recursion = fibonacci(n - 2, memo)
     
     # build-up
+=======
+    if n == 0: #
+        return 0 #
+
+    if n == 1: #
+        return 1 #
+
+    if n in memo: #
+        return memo[n] #
+    
+    # 
+    left_recursion = fibonacci(n - 1, memo)
+    # 
+    right_recursion = fibonacci(n - 2, memo)
+    # 
+>>>>>>> 618f7e71d2be245c047cd7ddd40361da80165564
     memo[n] = left_recursion + right_recursion
     
     return memo[n]
